@@ -5,29 +5,39 @@
 //   reverse('hello') === 'olleh'
 //   reverse('CodingMoney') === 'yenoMgnidoC'
 
-const reverse = (str: string): string => {
+
+const input1="CodingMoney"
+const input2="hello"
+const input3="hi"
+// using traditional for loop
+const reverse1 = (str: string): string => {
   let reversed = "";
 
   for (let i = 0; i < str.length; i++) {
     reversed = str[i] + reversed;
-    console.log("Using traditional for loop", reversed);
   }
   return reversed;
 };
+
+// using for of
 const reverse2 = (str: string): string => {
   let reversed = "";
 
   for (let char of str) {
     reversed = char + reversed;
-    console.log("Using for of loop", reversed);
+  
   }
-  return "s";
+  return reversed;
 };
+
+// using built-in functions
 const reverse3 = (str: string): string => {
 
-
+const reversed=str.split("").reverse().join("")
   
-  return "s";
+  return reversed;
 };
 
-console.log(reverse("CodingMoney"));
+console.log("Using Traditional for loop. Input:",input1,",Output:",reverse1(input1));
+console.log("Using for of loop. Input:",input2,",Output:",reverse2(input2));
+console.log("Using built in function. Input:",input2,",Output:",reverse3(input2));
