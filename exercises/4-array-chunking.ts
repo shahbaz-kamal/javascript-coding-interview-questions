@@ -8,4 +8,16 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+function chunk(array:Array<any>, size:number):Array<any> {
+    let result:Array<any>=[]
+let index=0
+
+while(index<array.length){
+    result.push(array.slice(index,index+size))
+    index+=size
+}
+return result
+}
+
+console.log(chunk([1, 2, 3, 4], 2))
+console.log(chunk([1, 2, 3, 4, 5], 4))
