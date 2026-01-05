@@ -8,6 +8,13 @@
 //   vowels('Coding Money') --> 4
 //   vowels('why?') --> 0 
 
-function vowels(str) {}
+function vowels(str:string):number {
+const vowels=["a","e","i","o","u"]
+let result=0
+for (let char of str){
+if (vowels.includes(char)) result+=1
+}
+return result
+}
 
 console.log(vowels('Coding Money'));
