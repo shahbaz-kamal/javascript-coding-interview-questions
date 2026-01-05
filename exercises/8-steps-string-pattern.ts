@@ -17,6 +17,12 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n: number) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+        console.log('#')
+    }
+  }
+}
 
-steps(3)
+steps(3);
